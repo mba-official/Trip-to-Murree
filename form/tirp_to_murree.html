@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trip To Murree</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap');
+    </style>
+</head>
+<style>
+    .error-msg {
+        padding: 5px;
+        left: 5px;
+        margin-bottom: 5px;
+        background-color: rgba(248, 95, 95, 0.737);
+        color: white;
+    }
+
+    .success-msg {
+        padding: 5px;
+        left: 5px;
+        margin-bottom: 5px;
+        background-color: rgba(68, 206, 96, 0.737);
+        color: white;
+    }
+</style>
+
+<body style="background-color: rgb(209, 175, 226);">
+    <div class="container mt-2">
+        <h1 class="text-center display-4 m-0 p-0" style="font-family: 'Baloo Bhai 2', sans-serif;">Welcome to MBA
+            Official</h1>
+        <h3 class="text-center display-6 mb-3" style="font-family: 'Baloo Bhai 2', sans-serif;">- Institute Of Real
+            Learning -</h3>
+        <h4 class="text-center display-5" style="text-decoration: underline; font-family: 'Baloo Bhai 2', sans-serif;">
+            Trip to Murree
+        </h4>
+        <h5 class="text-center text-danger m-0 p-0" style="font-family: 'Baloo Bhai 2', sans-serif;">
+            Come and explore the beautiful sights of murree with us.
+        </h5>
+        <h5 class="m-0 p-0" style="font-weight: bold; font-size: 22px;">NOTE:</h5>
+        <ul class="mb-1" style="font-size: large;">
+            <li>Fill this form carefully. Make sure that all your information is correct.</li>
+            <li>
+                If you have another partner with you, you have to fill his form
+                separately.
+            </li>
+        </ul>
+        <form id="formdata" method="post" class="form-control bg-dark"
+            style="width: 100%; font-weight: bold; color: white">
+            <div class="row mb-1">
+                <div class="col">
+                    <div data-mdb-input-init class="form-outline mb-2">
+                        <label class="form-label" for="fullname">Full Name</label>
+                        <input type="text" id="fullname" name="fullname" class="form-control" required />
+                    </div>
+                </div>
+                <div class="col">
+                    <div data-mdb-input-init class="form-outline mb-2">
+                        <label class="form-label" for="fname">Father Name</label>
+                        <input type="text" id="fname" name="fname" class="form-control" required />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-1">
+                <div class="col">
+                    <div data-mdb-input-init class="form-outline mb-2">
+                        <label class="form-label" for="age">Age</label>
+                        <input type="date" id="age" name="age" class="form-control" max="2004-12-31" required />
+                    </div>
+                </div>
+
+                <div class="col">
+                    <label for="gender">Choose Gender</label>
+                    <select name="gender" id="gender" class="form-select mt-2">
+                        <option selected value="">Choose Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+            </div>
+<!-- 
+                <div class="col">
+                    <div data-mdb-input-init class="form-outline mb-2">
+                        <label class="form-label" for="gender">Gender</label>
+                        <input type="text" id="gender" name="gender" class="form-control" required />
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="row mb-1">
+                <div class="col">
+                    <div data-mdb-input-init class="form-outline mb-2">
+                        <label class="form-label" for="contact">Contact</label>
+                        <input type="text" id="contact" name="contact" class="form-control" placeholder="(0300-0000000)"
+                            maxlength="12" required />
+                    </div>
+                </div>
+                <div class="col">
+                    <div data-mdb-input-init class="form-outline mb-2">
+                        <label class="form-label" for="email">Email</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="abc@gmail.com"
+                            required />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-1">
+                <div class="col">
+                    <div data-mdb-input-init class="form-outline mb-2">
+                        <label class="form-label" for="cnic">CNIC</label>
+                        <input type="text" id="cnic" name="cnic" class="form-control" placeholder="(00000-0000000-0)"
+                            maxlength="15" required />
+                    </div>
+                </div>
+                <div class="col">
+                    <div data-mdb-input-init class="form-outline mb-2">
+                        <label class="form-label" for="city">City</label>
+                        <input type="text" id="city" name="city" class="form-control" required />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div data-mdb-input-init class="form-outline mb-2">
+                        <label class="form-label" for="addres">Address</label>
+                        <input type="text" id="addres" name="addres" class="form-control" required />
+                    </div>
+                </div>
+
+                <div class="col">
+                    <label for="class">Choose Class</label>
+                    <select name="class" id="class" class="form-select mt-2">
+                        <option selected value="">Choose Class</option>
+                        <option value="11th">11th</option>
+                        <option value="12th">12th</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-check d-flex mb-2">
+                <label class="form-check-label" for="agreement">
+                    <input class="form-check-input me-2" type="checkbox" value="" id="agreement" required />
+                    I agree all the terms and conditions.
+                </label>
+            </div>
+            <!-- Response div -->
+            <!-- <div id="response"></div> -->
+
+            <!-- Submit button -->
+            <button data-mdb-ripple-init type="reset" class="btn btn-primary btn-block mb-2">
+                Cancel
+            </button>
+            <input type="button" value="Submit" id="submit" class="btn btn-primary btn-block mb-2" />
+            <div id="response"></div>
+        </form>
+
+    </div>
+
+    <!-- insert ajax jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- apply jquery -->
+    <script>
+        $(document).ready(function () {
+            $("#submit").click(function () {
+                var fullname = $("#fullname").val();
+                var fname = $("#fname").val();
+                var age = $("#age").val();
+                var gender = $("#gender").val();
+                var contact = $("#contact").val();
+                var email = $("#email").val();
+                var cnic = $("#cnic").val();
+                var city = $("#city").val();
+                var addres = $("#addres").val();
+                var classes = $("#class").val();
+
+                if (
+                    fullname == "" ||
+                    fname == "" ||
+                    age == "" ||
+                    gender == "" ||
+                    contact == "" ||
+                    email == "" ||
+                    cnic == "" ||
+                    city == "" ||
+                    addres == "" ||
+                    classes == ""
+                ) {
+                    $("#response").fadeIn();
+                    $("#response")
+                        .removeClass("success-msg")
+                        .addClass("error-msg")
+                        .html("All fields are required.");
+                    setTimeout(function () {
+                        $("#response").fadeOut("slow");
+                    }, 5000);
+                } else {
+                    $.ajax({
+                        url: "index.php",
+                        type: "POST",
+                        data: $("#formdata").serialize(),
+                        success: function (data) {
+                            $("#formdata").trigger("reset");
+                            $("#response").fadeIn();
+                            $("#response")
+                                .removeClass("error-msg")
+                                .addClass("success-msg")
+                                .html(data);
+                            setTimeout(function () {
+                                $("#response").fadeOut("slow");
+                            }, 5000);
+                        },
+                    });
+                }
+            });
+        });
+    </script>
+
+    <!-- insert ajax query -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+</body>
+
+</html>
